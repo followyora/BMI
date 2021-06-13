@@ -1,5 +1,6 @@
 package com.letit0or1.kawa.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -41,7 +42,9 @@ class MainActivity : AppCompatActivity() {
             outputresults.text = bmitext.toString()
 
         }
-
+        findViewById<ImageView>(R.id.imageView).setOnClickListener {
+            startActivity(Intent(this, BigInfoActivity::class.java))
+        }
     }
 
 }
